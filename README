@@ -1,5 +1,5 @@
 jquery.mousecapture.js
-version 1.1
+version 1.2
 by Sander Dieleman <sanderdieleman at gmail dot com>
 A simple mouse capturing plugin for jQuery.
 
@@ -40,9 +40,16 @@ Read http://benanne.net/code/?p=238 for more information.
 
 CHANGES
 
+v1.2
+- the context in which the down and up handlers are executed should be
+  "$this", not "target".
+- moved some code around to make it smaller: it doesn't matter wether
+  the handlers are attached / unattached before or after the actual
+  handler is executed. At least I think it doesn't.
+
 v1.1
-- added "return this" to the mousecapture method, so it conforms to the jQuery
-  plugin authoring guidelines.
+- added "return this" to the mousecapture method, so it conforms to the
+  jQuery plugin authoring guidelines.
 
 v1.0
 - first version
